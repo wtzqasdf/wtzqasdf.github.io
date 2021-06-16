@@ -166,9 +166,6 @@ img {
     height: auto;
     border-radius: 60px;
 }
-.row {
-    justify-content: center;
-}
 .about-help {
     font-size: 18px;
     line-height: 25px;

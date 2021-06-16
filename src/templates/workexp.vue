@@ -18,8 +18,8 @@
                     </li>
                     <li>
                         <ul>
-                            <li>電腦及零組件維護</li>
-                            <li>基本網路故障排除</li>
+                            <li>1. 電腦及零組件維護</li>
+                            <li>2. 基本網路故障排除</li>
                         </ul>
                     </li>
                     <li class="mt-2x">
@@ -30,10 +30,10 @@
                     </li>
                     <li>
                         <ul>
-                            <li>開發物品進出管理系統</li>
-                            <li>開發實時產線運作狀態系統</li>
-                            <li>開發檢核記錄表系統</li>
-                            <li>開發簡易自動爬蟲系統</li>
+                            <li>1. 開發物品進出管理系統</li>
+                            <li>2. 開發實時產線運作狀態系統</li>
+                            <li>3. 開發檢核記錄表系統</li>
+                            <li>4. 開發簡易自動爬蟲系統</li>
                         </ul>
                     </li>
                 </ol>
@@ -61,17 +61,11 @@ small {
     font-size: 14px;
     font-weight: bold;
 }
-.row {
-    justify-content: center;
-}
 ol {
     line-height: 30px;
 }
 ul {
     margin-left: 5rem;
-}
-ul li {
-    list-style: auto;
 }
 .mt-2x {
     margin-top: 2rem;
