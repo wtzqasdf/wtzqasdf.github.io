@@ -1,0 +1,124 @@
+.progress-bar {
+    border: 2px solid black;
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.progress-bar .prog-ani {
+    height: inherit;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: width;
+    transition-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+}
+.progress-bar .prog-green {
+    animation-name: prog-green;
+}
+.progress-bar .prog-blue {
+    animation-name: prog-blue;
+}
+.progress-bar .prog-orange {
+    animation-name: prog-orange;
+}
+.progress-bar .prog-red {
+    animation-name: prog-red;
+}
+.progress-bar .prog-violet {
+    animation-name: prog-violet;
+}
+.progress-bar .prog-gray{
+    animation-name: prog-gray;
+}
+
+@keyframes prog-green {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: green;
+    }
+    70% {
+        background-color: green;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes prog-blue {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: blue;
+    }
+    70% {
+        background-color: blue;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes prog-orange {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: rgb(184, 101, 0);
+    }
+    70% {
+        background-color: rgb(184, 101, 0);
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes prog-red {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: darkred;
+    }
+    70% {
+        background-color: darkred;
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes prog-violet {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: rgb(121, 0, 121);
+    }
+    70% {
+        background-color: rgb(121, 0, 121);
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes prog-gray {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: rgb(75, 75, 75);
+    }
+    70% {
+        background-color: rgb(75, 75, 75);
+    }
+    100% {
+        background-color: black;
+    }
+}

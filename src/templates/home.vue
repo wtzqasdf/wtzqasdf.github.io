@@ -1,0 +1,185 @@
+<template>
+    <div id="home" class="container">
+        <!-- 自我簡介 -->
+        <div class="row">
+            <div class="col-full text-center">
+                <h1>自我簡介</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4 text-center mt-1x">
+                <div>
+                    <img src="/img/jin.jpg" alt="個人圖片" />
+                </div>
+                <div class="text-big font-bold">楊靖仁(Jin)</div>
+            </div>
+            <div class="about-help text-center col-4 mt-1x">
+                非本科生的程式設計師
+                <br />學過多個程式語言
+                <br />擅長領域為網站與軟體設計
+                <br />擁有獨立作業能力
+            </div>
+        </div>
+        <!-- 語言熟練度 -->
+        <div class="row mt-2x">
+            <div class="col-full text-center">
+                <h1>語言熟練度</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h4>C#</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-green" :style="{ 'width': progressValues.csharp }">{{ progressValues.csharp }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>PHP</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-blue" :style="{ 'width': progressValues.php }">{{ progressValues.php }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>HTML</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-violet" :style="{ 'width': progressValues.html }">{{ progressValues.html }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>CSS</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-violet" :style="{ 'width': progressValues.css }">{{ progressValues.css }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>JavaScript</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-violet" :style="{ 'width': progressValues.js }">{{ progressValues.js }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>MySQL(MariaDB)</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-red" :style="{ 'width': progressValues.mysql }">{{ progressValues.mysql }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>C++</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-orange" :style="{ 'width': progressValues.cplusplus }">{{ progressValues.cplusplus }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>Python</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-gray" :style="{ 'width': progressValues.python }">{{ progressValues.python }}</div>
+                </div>
+            </div>
+        </div>
+        <!-- 框架熟練度 -->
+        <div class="row mt-2x">
+            <div class="col-full text-center">
+                <h1>框架熟練度</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-2">
+                <h4>Vue.js</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-green" :style="{ 'width': progressValues.vue }">{{ progressValues.vue }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-2">
+                <h4>PHP CodeIgniter</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-blue" :style="{ 'width': progressValues.codeigniter }">{{ progressValues.codeigniter }}</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<script>
+export default {
+    name: 'home',
+    mounted() {
+        setTimeout(() => {
+            this.initProgressValues();
+        }, 500);
+    },
+    data() {
+        return {
+            progressValues: {
+                csharp: '0%',
+                php: '0%',
+                js: '0%',
+                html: '0%',
+                css: '0%',
+                mysql: '0%',
+                cplusplus: '0%',
+                python: '0%',
+                vue: '0%',
+                codeigniter: '0%'
+            }
+        };
+    },
+    methods: {
+        initProgressValues() {
+            this.progressValues.csharp = '70%';
+            this.progressValues.php = '55%';
+            this.progressValues.html = '40%';
+            this.progressValues.css = '60%';
+            this.progressValues.js = '55%';
+            this.progressValues.vue = '60%';
+            this.progressValues.mysql = '60%';
+            this.progressValues.cplusplus = '20%';
+            this.progressValues.python = '10%';
+            this.progressValues.codeigniter = '45%';
+        }
+    }
+};
+</script>
+
+<style scoped>
+h4 {
+    font-size: 20px;
+    margin-bottom: 3px;
+}
+img {
+    width: 128px;
+    height: auto;
+    border-radius: 60px;
+}
+.row {
+    justify-content: center;
+}
+.about-help {
+    font-size: 18px;
+    line-height: 25px;
+}
+.text-big {
+    font-size: 24px;
+}
+.mt-2x {
+    margin-top: 2rem;
+}
+.mt-1x {
+    margin-top: 1rem;
+}
+</style>
