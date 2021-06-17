@@ -103,10 +103,10 @@
                 </div>
             </div>
         </div>
-        <!-- 框架熟練度 -->
+        <!-- 框架/工具熟練度 -->
         <div class="row mt-2x">
             <div class="col-full text-center">
-                <h1>框架熟練度</h1>
+                <h1>框架/工具熟練度</h1>
             </div>
         </div>
         <div class="row">
@@ -125,10 +125,18 @@
                 </div>
             </div>
         </div>
-        <!-- 使用技術 -->
+        <div class="row mt-1x">
+            <div class="col-4">
+                <h4>Git</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-gray" :style="{ 'width': progressValues.git }">{{ progressValues.git }}</div>
+                </div>
+            </div>
+        </div>
+        <!-- 常用技術/工具 -->
         <div class="row mt-2x">
             <div class="col-full text-center">
-                <h1>使用技術/工具</h1>
+                <h1>常用技術/工具</h1>
             </div>
         </div>
         <div class="row">
@@ -159,9 +167,10 @@ export default {
                 cplusplus: '0%',
                 python: '0%',
                 vue: '0%',
-                codeigniter: '0%'
+                codeigniter: '0%',
+                git: '0%'
             },
-            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'JQuery', 'Bootstrap']
+            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'Gogs(Git)', 'JQuery', 'Bootstrap']
         };
     },
     methods: {
@@ -176,6 +185,7 @@ export default {
             this.progressValues.cplusplus = '20%';
             this.progressValues.python = '10%';
             this.progressValues.codeigniter = '45%';
+            this.progressValues.git = '40%';
         }
     }
 };
