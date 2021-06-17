@@ -267,7 +267,7 @@ export default {
                 csharp: '0%'
             },
             pmsImages: [
-                { link: '/img/pms1.jpg', alt: 'pms1' },
+                { link: '/img/pms0.jpg', alt: 'pms0' },
                 { link: '/img/pms2.jpg', alt: 'pms2' },
                 { link: '/img/pms3.jpg', alt: 'pms3' },
                 { link: '/img/pms4.jpg', alt: 'pms4' }
