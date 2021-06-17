@@ -38,9 +38,9 @@ ul {
 li {
     background-color: transparent;
     font-size: 18px;
-    padding: 0.5rem;
     font-weight: bold;
     cursor: pointer;
+    padding: 0.5rem;
 }
 li:hover {
     background-color: rgba(0, 255, 0, 0.5);
@@ -51,5 +51,6 @@ li:active {
 a {
     text-decoration: none;
     color: white;
+    padding: 0.5rem 0;
 }
 </style>

@@ -18,10 +18,16 @@
 }
 
 @media screen and (min-width: 1px) {
+    .col-6 {
+        width: 100%;
+    }
     .col-4 {
         width: 100%;
     }
-    .col-2 {
+    .col-3 {
+        width: 100%;
+    }
+    .col-1 {
         width: 100%;
     }
     .row {
@@ -29,11 +35,17 @@
     }
 }
 @media screen and (min-width: 720px) {
+    .col-6 {
+        width: 50%;
+    }
     .col-4 {
+        width: 33.33%;
+    }
+    .col-3 {
         width: 25%;
     }
-    .col-2 {
-        width: 50%;
+    .col-1 {
+        width: 8.33%;
     }
     .row {
         flex-direction: row;

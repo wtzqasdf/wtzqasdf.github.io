@@ -20,6 +20,19 @@
                 <br />擁有獨立作業能力
             </div>
         </div>
+        <!-- 個人相關連結 -->
+        <div class="row mt-2x">
+            <div class="col-full text-center">
+                <h1>個人相關連結</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <div class="link-block">
+                    <a href="https://leetcode-cn.com/u/jin_man/" target="_blank">LeetCode</a>
+                </div>
+            </div>
+        </div>
         <!-- 語言熟練度 -->
         <div class="row mt-2x">
             <div class="col-full text-center">
@@ -27,7 +40,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>C#</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-green" :style="{ 'width': progressValues.csharp }">{{ progressValues.csharp }}</div>
@@ -35,7 +48,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>PHP</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-blue" :style="{ 'width': progressValues.php }">{{ progressValues.php }}</div>
@@ -43,7 +56,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>HTML</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-violet" :style="{ 'width': progressValues.html }">{{ progressValues.html }}</div>
@@ -51,7 +64,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>CSS</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-violet" :style="{ 'width': progressValues.css }">{{ progressValues.css }}</div>
@@ -59,7 +72,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>JavaScript</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-violet" :style="{ 'width': progressValues.js }">{{ progressValues.js }}</div>
@@ -67,7 +80,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>MySQL(MariaDB)</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-red" :style="{ 'width': progressValues.mysql }">{{ progressValues.mysql }}</div>
@@ -75,7 +88,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>C++</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-orange" :style="{ 'width': progressValues.cplusplus }">{{ progressValues.cplusplus }}</div>
@@ -83,7 +96,7 @@
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
+            <div class="col-4">
                 <h4>Python</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-gray" :style="{ 'width': progressValues.python }">{{ progressValues.python }}</div>
@@ -97,19 +110,30 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-2">
-                <h4>Vue.js</h4>
+            <div class="col-4">
+                <h4>Vue</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-green" :style="{ 'width': progressValues.vue }">{{ progressValues.vue }}</div>
                 </div>
             </div>
         </div>
         <div class="row mt-1x">
-            <div class="col-2">
-                <h4>PHP CodeIgniter</h4>
+            <div class="col-4">
+                <h4>CodeIgniter</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-blue" :style="{ 'width': progressValues.codeigniter }">{{ progressValues.codeigniter }}</div>
                 </div>
+            </div>
+        </div>
+        <!-- 使用技術 -->
+        <div class="row mt-2x">
+            <div class="col-full text-center">
+                <h1>使用技術/工具</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1" v-for="(data,index) in techList" :key="index">
+                <div class="box">{{ data }}</div>
             </div>
         </div>
     </div>
@@ -136,7 +160,8 @@ export default {
                 python: '0%',
                 vue: '0%',
                 codeigniter: '0%'
-            }
+            },
+            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'JQuery', 'Bootstrap']
         };
     },
     methods: {
@@ -178,5 +203,31 @@ img {
 }
 .mt-1x {
     margin-top: 1rem;
+}
+.col-1 {
+    margin: 0.5rem;
+}
+.box {
+    padding: 1rem 0.3rem;
+    box-shadow: 2px 2px 4px 0px black;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: default;
+    word-break: break-all;
+}
+.link-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-size: 24px;
+}
+.link-block a {
+    color: darkred;
+    text-decoration: none;
+}
+.link-block a:hover {
+    color: red;
 }
 </style>

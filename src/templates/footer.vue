@@ -4,7 +4,7 @@
             <div class="col-full text-center">
                 <small>
                     本站由&nbsp;
-                    <span class="mark">楊靖仁(Jin)</span>&nbsp;使用Vue.js製作
+                    <span class="mark">楊靖仁(Jin)</span>&nbsp;使用HTML,CSS,JS(Vue)製作
                 </small>
             </div>
         </div>
