@@ -170,7 +170,7 @@ export default {
                 codeigniter: '0%',
                 git: '0%'
             },
-            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'Gogs(Git)', 'JQuery', 'Bootstrap']
+            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'Gogs(Git)', 'JQuery', 'Bootstrap', 'Regex']
         };
     },
     methods: {
