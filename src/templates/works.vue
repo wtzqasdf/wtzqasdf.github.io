@@ -353,11 +353,11 @@ export default {
                 cplusplus: '0%'
             },
             chatbotImages: [
-                { link: '/img/chatbot1.jpg', alt: 'chatbot1' },
-                { link: '/img/chatbot2.jpg', alt: 'chatbot2' },
-                { link: '/img/chatbot3.jpg', alt: 'chatbot3' },
-                { link: '/img/chatbot4.jpg', alt: 'chatbot4' },
-                { link: '/img/chatbot5.jpg', alt: 'chatbot5' }
+                { link: '/img/chatbot1.JPG', alt: 'chatbot1' },
+                { link: '/img/chatbot2.JPG', alt: 'chatbot2' },
+                { link: '/img/chatbot3.JPG', alt: 'chatbot3' },
+                { link: '/img/chatbot4.JPG', alt: 'chatbot4' },
+                { link: '/img/chatbot5.JPG', alt: 'chatbot5' }
             ],
             chatbotPLUsage: {
                 frontend: '0%',
