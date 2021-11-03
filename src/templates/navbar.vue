@@ -8,7 +8,10 @@
                 <a href="/workexp.html" target="_self">工作經驗</a>
             </li>
             <li>
-                <a href="/works.html" target="_self">作品集</a>
+                <a href="/works.html" target="_self">工作作品集</a>
+            </li>
+            <li>
+                <a href="/person.html" target="_self">個人作品集</a>
             </li>
         </ul>
     </nav>

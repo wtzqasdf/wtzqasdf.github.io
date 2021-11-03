@@ -76,8 +76,8 @@
                     <li>1. 前端使用JS(Vue)與Canvas開發</li>
                     <li>2. 伺服器端使用C#處理來自所有機台終端的資料</li>
                     <li>3. 機台終端使用C#抓取及過濾待分析的資料</li>
-                    <li>4. 呈現資料包括"機台運作狀態", "工單號", "稼動率"</li>
-                    <li>5. 全程使用WebSocket做即時資料溝通, 伺服器負載量為(終端機台 * 25)(前端 * 1 ~ 5), 24小時運行</li>
+                    <li>4. 呈現資料包括"機台運作狀態", "工單號"</li>
+                    <li>5. 前端畫面使用WebSocket做資料顯示, 後端使用Http做資料傳輸, 伺服器每秒負載量為(終端機台 * 25)(前端 * 1 ~ 5), 24小時運行</li>
                     <li>6. 地圖呈現方式參考自廠內平面設計圖, 繪製方式則使用SVG向量圖形製作</li>
                 </ul>
             </div>
@@ -109,10 +109,10 @@
         <div class="row m-2x">
             <div class="underline"></div>
         </div>
-        <!-- 檢核記錄表系統 -->
+        <!-- 滅火器檢核記錄表系統 -->
         <div class="row">
             <div class="col-full text-center">
-                <h1>檢核記錄表系統</h1>
+                <h1>滅火器檢核記錄表系統</h1>
             </div>
         </div>
         <div class="row">
@@ -127,10 +127,10 @@
                 <ul>
                     <li>1. 前端使用JS(Vue), Canvas開發</li>
                     <li>2. 地圖呈現方式參考自廠內平面設計圖, 繪製方式則使用SVG向量圖形製作</li>
-                    <li>3. 後端使用PHP(CodeIgniter)與MySQL開發</li>
+                    <li>3. 後端使用PHP(CodeIgniter)與MySQL(MariaDB)開發</li>
                     <li>4. 此系統將傳統的紙張手寫方式轉移到網站上作業, 大幅簡化處理流程</li>
                     <li>5. 所有已記錄的資料可儲存為PDF檔, 以便供給其他客戶檢視</li>
-                    <li>6. 搭配QRCode, 客戶可以快速追蹤指定的資料, 並且可指定要使用"PDF"或是"地圖"方式開啟</li>
+                    <li>6. 搭配QRCode, 客戶可使用手機掃描, 快速追蹤指定的資料, 並且可指定要使用"PDF"或是"地圖"方式開啟</li>
                 </ul>
             </div>
         </div>
@@ -169,6 +169,57 @@
         <div class="row m-2x">
             <div class="underline"></div>
         </div>
+        <!-- 靜電檢核記錄表系統 -->
+        <div class="row">
+            <div class="col-full text-center">
+                <h1>靜電檢核記錄表系統</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-full text-center">
+                <a v-for="(data,index) in esdtableImages" :key="index" :href="data.link" target="_blank">
+                    <img :src="data.link" :alt="data.alt" />
+                </a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <ul>
+                    <li>1. 前端使用JS(Vue)開發</li>
+                    <li>2. 後端使用C#(ASP.NET Core)與MySQL(MariaDB)開發</li>
+                    <li>3. 系統提供了高度客製化內容, 讓使用者可自定義表格以及PDF的內容如何產生</li>
+                    <li>4. 檢核的資料可儲存為PDF檔案, 以便供給客戶檢視</li>
+                    <li>5. 搭配QRCode, 客戶可使用手機掃描, 快速追蹤指定的資料</li>
+                </ul>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-6">
+                <h4>HTML,CSS,JS(Vue)使用率</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-green" :style="{ 'width': esdtablePLUsage.frontend }">{{ esdtablePLUsage.frontend }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h4>C#(ASP.NET Core)使用率</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-blue" :style="{ 'width': esdtablePLUsage.csharp }">{{ esdtablePLUsage.csharp }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <h4>MySQL(MariaDB)使用率</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-violet" :style="{ 'width': esdtablePLUsage.mysql }">{{ esdtablePLUsage.mysql }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row m-2x">
+            <div class="underline"></div>
+        </div>
         <!-- 工單資料尋找系統 -->
         <div class="row">
             <div class="col-full text-center">
@@ -187,7 +238,7 @@
                 <ul>
                     <li>1. 此程式用於追蹤某個產品的問題詳細資料</li>
                     <li>2. 因一天產生的資料記錄檔約有數萬筆, 在追蹤上較不方便, 故使用自動搜尋解決人工搜尋作業</li>
-                    <li>3. 每次程式查詢的處理量約為數千筆到數十萬筆, 這會依照查詢的範圍而定</li>
+                    <li>3. 每次程式查詢的處理量約為數千筆到數十萬筆, 這會依照查詢的範圍及資料量而定</li>
                 </ul>
             </div>
         </div>
@@ -219,9 +270,9 @@
             <div class="col-6">
                 <ul>
                     <li>1. 主要以Arduino搭配RFID進行作業</li>
-                    <li>2. 系統分為輸入端與輸出端</li>
-                    <li>3. 輸入端是由電腦與RFID(Arduino)互相溝通, 由使用者輸入資料後, 再將卡片靠近RFID裝置即可完成寫入</li>
-                    <li>4. 輸出端則會模擬鍵盤訊號, 將卡片資料讀入RFID(Arduino)後, 轉換為對應的鍵盤訊號命令, 以指定間隔(毫秒)發送, 直到所有命令發送完畢</li>
+                    <li>2. 系統分為輸入資料端與輸出資料端</li>
+                    <li>3. 輸入資料端是由電腦與RFID(Arduino)互相溝通, 由使用者輸入資料後, 再將卡片靠近RFID裝置即可完成寫入</li>
+                    <li>4. 輸出資料端則會模擬鍵盤訊號, 將卡片資料讀入RFID(Arduino)後, 轉換為對應的鍵盤訊號命令, 以指定間隔(毫秒)發送, 直到所有命令發送完畢</li>
                 </ul>
             </div>
         </div>
@@ -238,50 +289,6 @@
                 <h4>C++使用率</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-blue" :style="{ 'width': rfidPLUsage.cplusplus }">{{ rfidPLUsage.cplusplus }}</div>
-                </div>
-            </div>
-        </div>
-        <div class="row m-2x">
-            <div class="underline"></div>
-        </div>
-        <!-- ChatBot聊天室 -->
-        <div class="row">
-            <div class="col-full text-center">
-                <h1>ChatBot聊天室</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-full text-center">
-                <a v-for="(data,index) in chatbotImages" :key="index" :href="data.link" target="_blank">
-                    <img :src="data.link" :alt="data.alt" />
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <ul>
-                    <li>1. 網站使用ASP.NET Core與SignalR製作</li>
-                    <li>2. 前端使用JS(Vue)製作</li>
-                    <li>3. 聊天訊息會依照使用者ID來區別訊息要放在左邊(對方)還是右邊(自己)</li>
-                    <li>4. 使用者可手動教導聊天機器人如何說話，由多個中文單詞合成一組到對應的回答</li>
-                    <li>5. 聊天機器人會依照使用者輸入的語句判斷資料庫中單詞的相符順序，找出最適合的答案</li>
-                    <li>5. 聊天機器人使用的演算法有"多元樹"與"遞迴分析"</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <h4>HTML,CSS,JS(Vue)使用率</h4>
-                <div class="progress-bar">
-                    <div class="prog-ani prog-green" :style="{ 'width': chatbotPLUsage.frontend }">{{ chatbotPLUsage.frontend }}</div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-1x">
-            <div class="col-6">
-                <h4>C#使用率</h4>
-                <div class="progress-bar">
-                    <div class="prog-ani prog-blue" :style="{ 'width': chatbotPLUsage.csharp }">{{ chatbotPLUsage.csharp }}</div>
                 </div>
             </div>
         </div>
@@ -302,24 +309,23 @@ export default {
                 { link: '/img/ims3.jpg', alt: 'ims3' },
                 { link: '/img/ims4.jpg', alt: 'ims4' },
                 { link: '/img/ims5.jpg', alt: 'ims5' },
-                { link: '/img/ims6.jpg', alt: 'ims6' }
+                { link: '/img/ims6.jpg', alt: 'ims6' },
             ],
             imsPLUsage: {
                 frontend: '0%',
                 backend: '0%',
                 mysql: '0%',
-                csharp: '0%'
+                csharp: '0%',
             },
             pmsImages: [
                 { link: '/img/pms0.jpg', alt: 'pms0' },
                 { link: '/img/pms2.jpg', alt: 'pms2' },
-                { link: '/img/pms3.jpg', alt: 'pms3' },
-                { link: '/img/pms4.jpg', alt: 'pms4' }
+                { link: '/img/pms4.jpg', alt: 'pms4' },
             ],
             pmsPLUsage: {
                 frontend: '0%',
                 svg: '0%',
-                csharp: '0%'
+                csharp: '0%',
             },
             checktableImages: [
                 { link: '/img/checktable1.jpg', alt: 'checktable1' },
@@ -328,44 +334,57 @@ export default {
                 { link: '/img/checktable4.jpg', alt: 'checktable4' },
                 { link: '/img/checktable5.jpg', alt: 'checktable5' },
                 { link: '/img/checktable6.jpg', alt: 'checktable6' },
-                { link: '/img/checktable7.jpg', alt: 'checktable7' }
+                { link: '/img/checktable7.jpg', alt: 'checktable7' },
             ],
             checktablePLUsage: {
                 frontend: '0%',
                 svg: '0%',
                 backend: '0%',
+                mysql: '0%',
+            },
+            esdtableImages: [
+                { link: '/img/esd1.JPG', alt: 'esd1' },
+                { link: '/img/esd2.JPG', alt: 'esd2' },
+                { link: '/img/esd3.JPG', alt: 'esd3' },
+                { link: '/img/esd4.JPG', alt: 'esd4' },
+                { link: '/img/esd5.JPG', alt: 'esd5' },
+                { link: '/img/esd6.JPG', alt: 'esd6' },
+            ],
+            esdtablePLUsage: {
+                frontend: '0%',
+                csharp: '0%',
                 mysql: '0%'
             },
             searcherImages: [
                 { link: '/img/wosearcher1.jpg', alt: 'wosearcher1' },
                 { link: '/img/wosearcher2.jpg', alt: 'wosearcher2' },
                 { link: '/img/wosearcher3.jpg', alt: 'wosearcher3' },
-                { link: '/img/wosearcher4.jpg', alt: 'wosearcher4' }
+                { link: '/img/wosearcher4.jpg', alt: 'wosearcher4' },
             ],
             searcherPLUsage: {
-                csharp: '0%'
+                csharp: '0%',
             },
             rfidImages: [
                 { link: '/img/rfid1.jpg', alt: 'rfid1' },
                 { link: '/img/rfid2.jpg', alt: 'rfid2' },
                 { link: '/img/rfid3.jpg', alt: 'rfid3' },
-                { link: '/img/rfid4.jpg', alt: 'rfid4' }
+                { link: '/img/rfid4.jpg', alt: 'rfid4' },
             ],
             rfidPLUsage: {
                 csharp: '0%',
-                cplusplus: '0%'
+                cplusplus: '0%',
             },
             chatbotImages: [
                 { link: '/img/chatbot1.JPG', alt: 'chatbot1' },
                 { link: '/img/chatbot2.JPG', alt: 'chatbot2' },
                 { link: '/img/chatbot3.JPG', alt: 'chatbot3' },
                 { link: '/img/chatbot4.JPG', alt: 'chatbot4' },
-                { link: '/img/chatbot5.JPG', alt: 'chatbot5' }
+                { link: '/img/chatbot5.JPG', alt: 'chatbot5' },
             ],
             chatbotPLUsage: {
                 frontend: '0%',
-                csharp: '0%'
-            }
+                csharp: '0%',
+            },
         };
     },
     methods: {
@@ -384,6 +403,10 @@ export default {
             this.checktablePLUsage.backend = '35%';
             this.checktablePLUsage.mysql = '15%';
 
+            this.esdtablePLUsage.frontend = '30%';
+            this.esdtablePLUsage.csharp = '40%';
+            this.esdtablePLUsage.mysql = '30%';
+
             this.searcherPLUsage.csharp = '100%';
 
             this.rfidPLUsage.csharp = '30%';
@@ -391,8 +414,8 @@ export default {
 
             this.chatbotPLUsage.frontend = '35%';
             this.chatbotPLUsage.csharp = '65%';
-        }
-    }
+        },
+    },
 };
 </script>
 

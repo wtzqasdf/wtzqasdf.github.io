@@ -17,7 +17,7 @@
                 非本科生的程式設計師
                 <br />學過多個程式語言
                 <br />擅長領域為網站與軟體設計
-                <br />擁有獨立作業能力
+                <br />有獨立完成專案的能力
             </div>
         </div>
         <!-- 個人相關連結 -->
@@ -95,14 +95,6 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-1x">
-            <div class="col-4">
-                <h4>Python</h4>
-                <div class="progress-bar">
-                    <div class="prog-ani prog-gray" :style="{ 'width': progressValues.python }">{{ progressValues.python }}</div>
-                </div>
-            </div>
-        </div>
         <!-- 框架/工具熟練度 -->
         <div class="row mt-2x">
             <div class="col-full text-center">
@@ -122,6 +114,14 @@
                 <h4>CodeIgniter</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-blue" :style="{ 'width': progressValues.codeigniter }">{{ progressValues.codeigniter }}</div>
+                </div>
+            </div>
+        </div>
+         <div class="row mt-1x">
+            <div class="col-4">
+                <h4>ASP.NET(含Core)</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-red" :style="{ 'width': progressValues.aspnet }">{{ progressValues.aspnet }}</div>
                 </div>
             </div>
         </div>
@@ -165,9 +165,9 @@ export default {
                 css: '0%',
                 mysql: '0%',
                 cplusplus: '0%',
-                python: '0%',
                 vue: '0%',
                 codeigniter: '0%',
+                aspnet: '0%',
                 git: '0%'
             },
             techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'Gogs(Git)', 'JQuery', 'Bootstrap', 'Regex']
@@ -183,9 +183,9 @@ export default {
             this.progressValues.vue = '60%';
             this.progressValues.mysql = '60%';
             this.progressValues.cplusplus = '20%';
-            this.progressValues.python = '10%';
             this.progressValues.codeigniter = '45%';
-            this.progressValues.git = '40%';
+            this.progressValues.aspnet = '45%';
+            this.progressValues.git = '30%';
         }
     }
 };
