@@ -95,6 +95,14 @@
                 </div>
             </div>
         </div>
+        <div class="row mt-1x">
+            <div class="col-4">
+                <h4>TypeScript</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-yellow" :style="{ 'width': progressValues.typescript }">{{ progressValues.typescript }}</div>
+                </div>
+            </div>
+        </div>
         <!-- 框架/工具熟練度 -->
         <div class="row mt-2x">
             <div class="col-full text-center">
@@ -117,7 +125,7 @@
                 </div>
             </div>
         </div>
-         <div class="row mt-1x">
+        <div class="row mt-1x">
             <div class="col-4">
                 <h4>ASP.NET(含Core)</h4>
                 <div class="progress-bar">
@@ -165,12 +173,13 @@ export default {
                 css: '0%',
                 mysql: '0%',
                 cplusplus: '0%',
+                typescript: '0%',
                 vue: '0%',
                 codeigniter: '0%',
                 aspnet: '0%',
-                git: '0%'
+                git: '0%',
             },
-            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'Gogs(Git)', 'JQuery', 'Bootstrap', 'Regex']
+            techList: ['AJAX', 'WebSocket', 'TCP/IP', 'UDP', 'JSON', 'SVG', 'Canvas', 'Gogs(Git)', 'JQuery', 'Bootstrap', 'Regex'],
         };
     },
     methods: {
@@ -183,11 +192,12 @@ export default {
             this.progressValues.vue = '60%';
             this.progressValues.mysql = '60%';
             this.progressValues.cplusplus = '20%';
-            this.progressValues.codeigniter = '45%';
-            this.progressValues.aspnet = '45%';
+            this.progressValues.typescript = '45%';
+            this.progressValues.codeigniter = '35%';
+            this.progressValues.aspnet = '50%';
             this.progressValues.git = '30%';
-        }
-    }
+        },
+    },
 };
 </script>
 

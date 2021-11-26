@@ -29,8 +29,11 @@
 .progress-bar .prog-violet {
     animation-name: prog-violet;
 }
-.progress-bar .prog-gray{
+.progress-bar .prog-gray {
     animation-name: prog-gray;
+}
+.progress-bar .prog-yellow{
+    animation-name: prog-yellow;
 }
 
 @keyframes prog-green {
@@ -117,6 +120,21 @@
     }
     70% {
         background-color: rgb(75, 75, 75);
+    }
+    100% {
+        background-color: black;
+    }
+}
+
+@keyframes prog-yellow {
+    0% {
+        background-color: black;
+    }
+    30% {
+        background-color: rgb(138, 106, 0);
+    }
+    70% {
+        background-color: rgb(138, 106, 0);
     }
     100% {
         background-color: black;
