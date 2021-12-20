@@ -18,6 +18,9 @@
 }
 
 @media screen and (min-width: 1px) {
+    .col-8 {
+        width: 100%;
+    }
     .col-6 {
         width: 100%;
     }
@@ -35,7 +38,10 @@
         align-content: center;
     }
 }
-@media screen and (min-width: 720px) {
+@media screen and (min-width: 960px) {
+    .col-8 {
+        width: 66.66%;
+    }
     .col-6 {
         width: 50%;
     }

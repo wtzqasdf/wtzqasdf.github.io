@@ -14,7 +14,7 @@
             "sortAttributes": false
         },
         "prettier": {
-            "printWidth": 500,
+            "printWidth": 200,
             "singleQuote": true
         }
     },
