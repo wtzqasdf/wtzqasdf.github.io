@@ -14,10 +14,10 @@
                 <div class="text-big font-bold">楊靖仁(Jin)</div>
             </div>
             <div class="about-help text-center col-4 mt-1x">
-                非本科生的程式設計師
-                <br />學過多個程式語言
-                <br />擅長領域為網站與軟體設計
-                <br />有獨立完成專案的能力
+                非本科生的軟體工程師
+                <br>能在多個程式語言間快速交互使用
+                <br>以及面對客戶需求可以利用現有知識及經驗
+                <br>快速想出一或多個解決方案或流程架構
             </div>
         </div>
         <!-- 個人相關連結 -->
@@ -81,6 +81,14 @@
         </div>
         <div class="row mt-1x">
             <div class="col-4">
+                <h4>TypeScript</h4>
+                <div class="progress-bar">
+                    <div class="prog-ani prog-yellow" :style="{ 'width': progressValues.typescript }">{{ progressValues.typescript }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-1x">
+            <div class="col-4">
                 <h4>MySQL(MariaDB)</h4>
                 <div class="progress-bar">
                     <div class="prog-ani prog-red" :style="{ 'width': progressValues.mysql }">{{ progressValues.mysql }}</div>
@@ -89,17 +97,17 @@
         </div>
         <div class="row mt-1x">
             <div class="col-4">
-                <h4>C++</h4>
+                <h4>MSSQL</h4>
                 <div class="progress-bar">
-                    <div class="prog-ani prog-orange" :style="{ 'width': progressValues.cplusplus }">{{ progressValues.cplusplus }}</div>
+                    <div class="prog-ani prog-red" :style="{ 'width': progressValues.mssql }">{{ progressValues.mssql }}</div>
                 </div>
             </div>
         </div>
         <div class="row mt-1x">
             <div class="col-4">
-                <h4>TypeScript</h4>
+                <h4>C++</h4>
                 <div class="progress-bar">
-                    <div class="prog-ani prog-yellow" :style="{ 'width': progressValues.typescript }">{{ progressValues.typescript }}</div>
+                    <div class="prog-ani prog-orange" :style="{ 'width': progressValues.cplusplus }">{{ progressValues.cplusplus }}</div>
                 </div>
             </div>
         </div>
@@ -172,6 +180,7 @@ export default {
                 html: '0%',
                 css: '0%',
                 mysql: '0%',
+                mssql: '0%',
                 cplusplus: '0%',
                 typescript: '0%',
                 vue: '0%',
@@ -190,7 +199,8 @@ export default {
             this.progressValues.css = '60%';
             this.progressValues.js = '55%';
             this.progressValues.vue = '60%';
-            this.progressValues.mysql = '60%';
+            this.progressValues.mysql = '50%';
+            this.progressValues.mssql = '45%';
             this.progressValues.cplusplus = '20%';
             this.progressValues.typescript = '45%';
             this.progressValues.codeigniter = '35%';
@@ -228,7 +238,7 @@ img {
     margin: 0.5rem;
 }
 .box {
-    padding: 1rem 0.3rem;
+    padding: 1rem 0.5rem;
     box-shadow: 2px 2px 4px 0px black;
     text-align: center;
     font-size: 20px;

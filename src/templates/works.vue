@@ -13,6 +13,8 @@
         <detail-block :title="'RFID工單輸入系統'" :images="rfidImages" :progressBars="rfidPLUsage" :helpTexts="rfidHelpTexts"></detail-block>
         <underline></underline>
         <detail-block :title="'即時出貨通知圖表'" :images="shipmentNotifyImages" :progressBars="shipmentNotifyPLUsage" :helpTexts="shipmentNotifyHelpTexts"></detail-block>
+        <underline></underline>
+        <detail-block :title="'報表數據彙整系統'" :images="ReportingServerImages" :progressBars="ReportingServerPLUsage" :helpTexts="ReportingServerHelpTexts"></detail-block>
     </div>
 </template>
 
@@ -152,11 +154,35 @@ export default {
                 '3. 資料來源部分為"鼎新ERP資料庫"',
                 '4. 前端所呈現的資料為"當日出貨統計", "出貨明細", "出貨明細(客戶端)"',
                 '5. 後端採用非同步讀取模式，即使讀取資料庫時間過久，也不會造成AJAX等候',
-                '6. 只有當AJAX有請求時才會開始讀取+解析ERP資料，以節省系統資源'
+                '6. 只有當AJAX有請求時才會開始讀取+解析ERP資料，以節省系統資源',
             ],
             shipmentNotifyPLUsage: [
                 { title: 'HTML,CSS,TS(Vue)', width: '0%', targetWidth: '40%', styleClass: 'prog-green' },
                 { title: 'C#(ASP.NET Core)', width: '0%', targetWidth: '60%', styleClass: 'prog-blue' },
+            ],
+            //--------
+            ReportingServerImages: [
+                { link: '/img/RS1.jpg', alt: 'RS1' },
+                { link: '/img/RS2.jpg', alt: 'RS2' },
+                { link: '/img/RS3.jpg', alt: 'RS3' },
+                { link: '/img/RS4.jpg', alt: 'RS4' },
+                { link: '/img/RS5.jpg', alt: 'RS5' },
+                { link: '/img/RS6.jpg', alt: 'RS6' },
+                { link: '/img/RS7.jpg', alt: 'RS7' },
+                { link: '/img/RS8.jpg', alt: 'RS8' },
+                { link: '/img/RS9.jpg', alt: 'RS9' },
+                { link: '/img/RS10.jpg', alt: 'RS10' },
+            ],
+            ReportingServerHelpTexts: [
+                '1. 報表核心使用SSRS(SQL Server Reporting Services)進行資料渲染，報表格式則使用RDL(報表定義語言)進行製作',
+                '2. 報表資料全程使用SQL進行操作，故需要因應報表需求撰寫不同的SQL指令',
+                '3. 報表核心使用NTLM驗證，結合Active Directory，以方便管理每個使用者的瀏覽權限',
+                '3. 製作RS模組功能，以自訂RS前端UI介面，給使用者較好的視覺效果',
+            ],
+            ReportingServerPLUsage: [
+                { title: 'HTML, CSS, JS', width: '0%', targetWidth: '5%', styleClass: 'prog-green' },
+                { title: 'C#', width: '0%', targetWidth: '5%', styleClass: 'prog-blue' },
+                { title: 'MSSQL', width: '0%', targetWidth: '90%', styleClass: 'prog-violet' },
             ],
         };
     },
@@ -169,6 +195,7 @@ export default {
             this.updateWidthOfArray(this.searcherPLUsage);
             this.updateWidthOfArray(this.rfidPLUsage);
             this.updateWidthOfArray(this.shipmentNotifyPLUsage);
+            this.updateWidthOfArray(this.ReportingServerPLUsage);
         },
         updateWidthOfArray(arr) {
             for (let i = 0; i < arr.length; i++) {

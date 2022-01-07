@@ -26,7 +26,7 @@
                         <h6>品安科技</h6>
                     </li>
                     <li>
-                        <small>(程式設計師)</small>
+                        <small>(軟體工程師)</small>
                     </li>
                     <li>
                         <ul>
