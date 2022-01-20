@@ -1,100 +1,55 @@
 <template>
     <div id="person" class="container">
-        <!-- ChatBot聊天室 -->
-        <div class="row">
-            <div class="col-full text-center">
-                <h1>ChatBot聊天室</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-full text-center">
-                <a v-for="(data,index) in chatbotImages" :key="index" :href="data.link" target="_blank">
-                    <img :src="data.link" :alt="data.alt" />
-                </a>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <ul>
-                    <li>1. 網站使用ASP.NET Core與SignalR製作</li>
-                    <li>2. 前端使用JS(Vue)製作</li>
-                    <li>3. 聊天訊息會依照使用者ID來區別訊息要放在左邊(對方)還是右邊(自己)</li>
-                    <li>4. 使用者可手動教導聊天機器人如何說話，由多個中文單詞合成一組到對應的回答</li>
-                    <li>5. 聊天機器人會依照使用者輸入的語句判斷資料庫中單詞的相符順序，找出最適合的答案</li>
-                    <li>5. 聊天機器人使用的演算法有"多元樹"與"遞迴分析"</li>
-                </ul>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-6">
-                <h4>HTML,CSS,JS(Vue)使用率</h4>
-                <div class="progress-bar">
-                    <div class="prog-ani prog-green" :style="{ 'width': chatbotPLUsage.frontend }">{{ chatbotPLUsage.frontend }}</div>
-                </div>
-            </div>
-        </div>
-        <div class="row mt-1x">
-            <div class="col-6">
-                <h4>C#(ASP.NET Core)使用率</h4>
-                <div class="progress-bar">
-                    <div class="prog-ani prog-blue" :style="{ 'width': chatbotPLUsage.csharp }">{{ chatbotPLUsage.csharp }}</div>
-                </div>
-            </div>
-        </div>
+        <detail-block :title="'NumberGo'" :images="numbergoImages" :progressBars="numbergoPLUsage" :helpTexts="numbergoHelpTexts"></detail-block>
     </div>
 </template>
 
 <script>
+import DetailBlock from '../components/detail-block.vue';
+import Underline from '../components/underline.vue';
+
 export default {
     name: 'person',
     mounted() {
         setTimeout(this.initPLUsages, 500);
     },
+    components: {
+        DetailBlock,
+        Underline,
+    },
     data() {
         return {
-            chatbotImages: [
-                { link: '/img/chatbot1.JPG', alt: 'chatbot1' },
-                { link: '/img/chatbot2.JPG', alt: 'chatbot2' },
-                { link: '/img/chatbot3.JPG', alt: 'chatbot3' },
-                { link: '/img/chatbot4.JPG', alt: 'chatbot4' },
-                { link: '/img/chatbot5.JPG', alt: 'chatbot5' },
+            numbergoImages: [
+                { link: '/img/numbergo1.jpg', alt: 'numbergo1' },
+                { link: '/img/numbergo2.jpg', alt: 'numbergo2' },
+                { link: '/img/numbergo3.jpg', alt: 'numbergo3' },
+                { link: '/img/numbergo4.jpg', alt: 'numbergo4' },
+                { link: '/img/numbergo5.jpg', alt: 'numbergo5' },
+                { link: '/img/numbergo6.jpg', alt: 'numbergo6' },
+                { link: '/img/numbergo7.jpg', alt: 'numbergo7' },
             ],
-            chatbotPLUsage: {
-                frontend: '0%',
-                csharp: '0%',
-            },
+            numbergoPLUsage: [
+                { title: 'HTML,CSS,JS(Vue)', width: '0%', targetWidth: '50%', styleClass: 'prog-green' },
+                { title: 'C#(ASP.NET Core)', width: '0%', targetWidth: '35%', styleClass: 'prog-orange' },
+                { title: 'MariaDB', width: '0%', targetWidth: '15%', styleClass: 'prog-violet' },
+            ],
+            numbergoHelpTexts: [
+                '1. 基於HTML的益智單人小遊戲',
+                '2. 遊戲語言包含中文與英文',
+                '3. 後端與資料庫位於Oracle cloud vm，以獲得較多的效能以及權限管理',
+                '4. 可分享遊戲分數連結，當Crawler在抓取連結資料時，也能順利取得相關資料(包含暱稱、分數、通關時間)'
+            ],
         };
     },
     methods: {
         initPLUsages() {
-            this.chatbotPLUsage.frontend = '35%';
-            this.chatbotPLUsage.csharp = '65%';
+            this.updateWidthOfArray(this.numbergoPLUsage);
+        },
+        updateWidthOfArray(arr) {
+            for (let i = 0; i < arr.length; i++) {
+                arr[i].width = arr[i].targetWidth;
+            }
         },
     },
 };
 </script>
-
-<style scoped>
-h4 {
-    font-size: 20px;
-    margin: 0.3rem 0;
-    font-style: italic;
-}
-img {
-    max-width: 128px;
-}
-ul {
-    line-height: 25px;
-}
-.mt-1x {
-    margin-top: 1rem;
-}
-.m-2x {
-    margin: 2rem 0;
-}
-.underline {
-    height: 2px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-</style>
