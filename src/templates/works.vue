@@ -151,7 +151,7 @@ export default {
             shipmentNotifyHelpTexts: [
                 '1. 前端使用Vue3 + TS開發',
                 '2. 後端使用C#(ASP.NET Core)開發',
-                '3. 資料來源部分為"鼎新ERP資料庫"',
+                '3. 資料來源部分為"鼎新ERP"資料庫',
                 '4. 前端所呈現的資料為"當日出貨統計", "出貨明細", "出貨明細(客戶端)"',
                 '5. 後端採用非同步讀取模式，即使讀取資料庫時間過久，也不會造成AJAX等候',
                 '6. 只有當AJAX有請求時才會開始讀取+解析ERP資料，以節省系統資源',
@@ -177,7 +177,8 @@ export default {
                 '1. 報表核心使用SSRS(SQL Server Reporting Services)進行資料渲染，報表格式則使用RDL(報表定義語言)進行製作',
                 '2. 報表資料全程使用SQL進行操作，故需要因應報表需求撰寫不同的SQL指令',
                 '3. 報表核心使用NTLM驗證，結合Active Directory，以方便管理每個使用者的瀏覽權限',
-                '3. 製作RS模組功能，以自訂RS前端UI介面，給使用者較好的視覺效果',
+                '4. 資料都來自不同的資料庫，包含"公司內部私有"資料庫，也包含"鼎新ERP"資料庫',
+                '5. 製作RS模組功能，以自訂RS前端UI介面，給使用者較好的視覺效果',
             ],
             ReportingServerPLUsage: [
                 { title: 'HTML, CSS, JS', width: '0%', targetWidth: '5%', styleClass: 'prog-green' },
