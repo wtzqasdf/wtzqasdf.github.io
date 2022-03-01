@@ -42,9 +42,11 @@ export default {
                 { link: '/img/ims6.jpg', alt: 'ims6' },
             ],
             imsHelpTexts: [
-                '1. 使用JS(Vue)與PHP(CodeIgniter)製作, 前後端溝通使用Ajax技術',
-                '2. 系統整體方向為"物品進出記錄", "人員與權限管理", "維修記錄", "人員交接記錄"',
-                '3. 特殊功能包括自動送信及警報器系統, 可手動設定信件以及發送時間參數, 自動系統處理部分使用C#開發',
+                '1. 前端使用JS(Vue)進行畫面渲染及互動',
+                '2. 後端使用PHP(Codeigniter)製作',
+                '3. 資料庫部分使用MySQL(MariaDB)',
+                '4. 系統類型為常見的"倉儲管理系統"，也包含了人員領料、扣帳、維修等互動',
+                '3. 特殊功能包括自動送信功能, 透過Mail方式通知是否有數量不足的物品，其功能使用C#開發',
             ],
             imsPLUsage: [
                 { title: 'HTML,CSS,JS(Vue)', width: '0%', targetWidth: '35%', styleClass: 'prog-green' },
@@ -125,8 +127,8 @@ export default {
             ],
             searcherHelpTexts: [
                 '1. 此程式用於追蹤某個產品的問題詳細資料',
-                '2. 因一天產生的資料記錄檔約有數萬筆, 在追蹤上較不方便, 故使用自動搜尋解決人工搜尋作業',
-                '3. 每次程式查詢的處理量約為數千筆到數十萬筆, 這會依照查詢的範圍及資料量而定',
+                '2. 因一天產生的資料記錄檔約有數萬筆(全為文字檔), 在追蹤上較不方便, 故使用自動搜尋解決人工搜尋作業',
+                '3. 每次程式查詢的處理量約為數千筆到數十萬筆, 這會依照查詢範圍以及工單號碼而定',
             ],
             searcherPLUsage: [{ title: 'C#', width: '0%', targetWidth: '100%', styleClass: 'prog-green' }],
             //--------
@@ -138,9 +140,11 @@ export default {
             ],
             rfidHelpTexts: [
                 '1. 主要以Arduino搭配RFID進行作業',
-                '2. 系統分為輸入資料端與輸出資料端',
-                '3. 輸入資料端是由電腦與RFID(Arduino)互相溝通, 由使用者輸入資料後, 再將卡片靠近RFID裝置即可完成寫入',
-                '4. 輸出資料端則會模擬鍵盤訊號, 將卡片資料讀入RFID(Arduino)後, 轉換為對應的鍵盤訊號命令, 以指定間隔(毫秒)發送, 直到所有命令發送完畢',
+                '2. 系統分為"輸入資料端"與"輸出資料端"',
+                '3. 輸入資料端是由電腦與RFID(Arduino)互相連線, 由使用者輸入資料後, 再將卡片靠近RFID裝置即可完成寫入',
+                '4. 輸出資料端則會"模擬鍵盤訊號", 將卡片資料讀入RFID(Arduino)後, 轉換為對應的鍵盤訊號命令, 以指定間隔(毫秒)發送, 直到所有命令發送完畢',
+                '5. 輸入資料端部分是運行在Ubuntu系統，使用C#開發，程式則是使用Mono框架運行',
+                '6. 輸出資料端為Arduino獨立運行，使用C++進行開發，其主板上面也包含了各種元件(RFID Sensor, Speaker, LED, Button, PS/2)'
             ],
             rfidPLUsage: [
                 { title: 'C#', width: '0%', targetWidth: '30%', styleClass: 'prog-green' },

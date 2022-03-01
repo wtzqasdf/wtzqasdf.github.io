@@ -11,7 +11,7 @@
                 <div>
                     <img src="/img/jin.jpg" alt="個人圖片" />
                 </div>
-                <div class="text-big font-bold">楊靖仁(Jin)</div>
+                <div class="text-big font-bold mt-1x">楊靖仁(Jin)</div>
             </div>
             <div class="about-help text-center col-4 mt-1x">
                 非本科生的軟體工程師
