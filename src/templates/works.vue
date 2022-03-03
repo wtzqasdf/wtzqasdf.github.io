@@ -58,7 +58,7 @@ export default {
             pmsImages: [
                 { link: '/img/pms0.jpg', alt: 'pms0' },
                 { link: '/img/pms2.jpg', alt: 'pms2' },
-                { link: '/img/pms4.jpg', alt: 'pms4' },
+                { link: '/img/pms3.jpg', alt: 'pms3' },
             ],
             pmsHelpTexts: [
                 '1. 前端使用JS(Vue)與Canvas開發',
@@ -67,6 +67,7 @@ export default {
                 '4. 呈現資料包括"機台運作狀態", "工單號"',
                 '5. 前端畫面使用WebSocket做資料顯示, 後端使用Http做資料傳輸, 伺服器每秒負載量為(終端機台 * 25)(前端 * 1 ~ 5), 24小時運行',
                 '6. 地圖呈現方式參考自廠內平面設計圖, 繪製方式則使用SVG向量圖形製作',
+                '7. 上方額外包含了時間以及天氣狀況(內部與外部)'
             ],
             pmsPLUsage: [
                 { title: 'HTML,CSS,JS(Canvas, Vue)', width: '0%', targetWidth: '25%', styleClass: 'prog-green' },
@@ -123,7 +124,6 @@ export default {
                 { link: '/img/wosearcher1.jpg', alt: 'wosearcher1' },
                 { link: '/img/wosearcher2.jpg', alt: 'wosearcher2' },
                 { link: '/img/wosearcher3.jpg', alt: 'wosearcher3' },
-                { link: '/img/wosearcher4.jpg', alt: 'wosearcher4' },
             ],
             searcherHelpTexts: [
                 '1. 此程式用於追蹤某個產品的問題詳細資料',
