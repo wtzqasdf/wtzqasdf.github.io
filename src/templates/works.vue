@@ -14,6 +14,8 @@
         <underline></underline>
         <detail-block :title="'即時出貨通知圖表'" :images="shipmentNotifyImages" :progressBars="shipmentNotifyPLUsage" :helpTexts="shipmentNotifyHelpTexts"></detail-block>
         <underline></underline>
+        <detail-block :title="'設備瀏覽系統'" :images="mbsImages" :progressBars="mbsPLUsage" :helpTexts="mbsHelpTexts"></detail-block>
+        <underline></underline>
         <detail-block :title="'報表數據彙整系統'" :images="ReportingServerImages" :progressBars="ReportingServerPLUsage" :helpTexts="ReportingServerHelpTexts"></detail-block>
     </div>
 </template>
@@ -67,7 +69,7 @@ export default {
                 '4. 呈現資料包括"機台運作狀態", "工單號"',
                 '5. 前端畫面使用WebSocket做資料顯示, 後端使用Http做資料傳輸, 伺服器每秒負載量為(終端機台 * 25)(前端 * 1 ~ 5), 24小時運行',
                 '6. 地圖呈現方式參考自廠內平面設計圖, 繪製方式則使用SVG向量圖形製作',
-                '7. 上方額外包含了時間以及天氣狀況(內部與外部)'
+                '7. 上方額外包含了時間以及天氣狀況(內部與外部)',
             ],
             pmsPLUsage: [
                 { title: 'HTML,CSS,JS(Canvas, Vue)', width: '0%', targetWidth: '25%', styleClass: 'prog-green' },
@@ -144,7 +146,7 @@ export default {
                 '3. 輸入資料端是由電腦與RFID(Arduino)互相連線, 由使用者輸入資料後, 再將卡片靠近RFID裝置即可完成寫入',
                 '4. 輸出資料端則會"模擬鍵盤訊號", 將卡片資料讀入RFID(Arduino)後, 轉換為對應的鍵盤訊號命令, 以指定間隔(毫秒)發送, 直到所有命令發送完畢',
                 '5. 輸入資料端部分是運行在Ubuntu系統，使用C#開發，程式則是使用Mono框架運行',
-                '6. 輸出資料端為Arduino獨立運行，使用C++進行開發，其主板上面也包含了各種元件(RFID Sensor, Speaker, LED, Button, PS/2)'
+                '6. 輸出資料端為Arduino獨立運行，使用C++進行開發，其主板上面也包含了各種元件(RFID Sensor, Speaker, LED, Button, PS/2)',
             ],
             rfidPLUsage: [
                 { title: 'C#', width: '0%', targetWidth: '30%', styleClass: 'prog-green' },
@@ -163,6 +165,28 @@ export default {
             shipmentNotifyPLUsage: [
                 { title: 'HTML,CSS,TS(Vue)', width: '0%', targetWidth: '40%', styleClass: 'prog-green' },
                 { title: 'C#(ASP.NET Core)', width: '0%', targetWidth: '60%', styleClass: 'prog-blue' },
+            ],
+            //--------
+            mbsImages: [
+                { link: '/img/mbs1.jpg', alt: 'mbs1' },
+                { link: '/img/mbs2.jpg', alt: 'mbs2' },
+                { link: '/img/mbs3.jpg', alt: 'mbs3' },
+                { link: '/img/mbs4.jpg', alt: 'mbs4' },
+                { link: '/img/mbs5.jpg', alt: 'mbs5' },
+                { link: '/img/mbs6.jpg', alt: 'mbs6' },
+                { link: '/img/mbs7.jpg', alt: 'mbs7' },
+            ],
+            mbsHelpTexts: [
+                '1. 前端使用Vue3 + TS開發', 
+                '2. 後端使用C#(ASP.NET Core)開發', 
+                '3. 此系統可由各部門定義要顯示的機器設備資料',
+                '4. 設備資料來源為網路芳鄰路徑，在請求API時帶入路徑由後端統一讀取後回傳(包含資料夾, 檔案等等)',
+                '5. 提供QRCode功能可快速導向指定的設備資料網頁',
+                '6. 後台權限會依照使用者的帳號(Active Directory)自動區別是哪一個部門，所以各部門的資料都是由部門獨立管理'],
+            mbsPLUsage: [
+                { title: 'HTML,CSS,TS(Vue)', width: '0%', targetWidth: '40%', styleClass: 'prog-green' },
+                { title: 'C#(ASP.NET Core)', width: '0%', targetWidth: '40%', styleClass: 'prog-blue' },
+                { title: 'MS SQL', width: '0%', targetWidth: '20%', styleClass: 'prog-violet' },
             ],
             //--------
             ReportingServerImages: [
@@ -200,6 +224,7 @@ export default {
             this.updateWidthOfArray(this.searcherPLUsage);
             this.updateWidthOfArray(this.rfidPLUsage);
             this.updateWidthOfArray(this.shipmentNotifyPLUsage);
+            this.updateWidthOfArray(this.mbsPLUsage);
             this.updateWidthOfArray(this.ReportingServerPLUsage);
         },
         updateWidthOfArray(arr) {

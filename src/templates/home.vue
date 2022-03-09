@@ -163,7 +163,7 @@
         <!-- 常用技術/工具 -->
         <div class="row mt-2x">
             <div class="col-full text-center">
-                <h1>常用技術/工具</h1>
+                <h1>使用技術/工具</h1>
             </div>
         </div>
         <div class="row">
@@ -205,16 +205,16 @@ export default {
     methods: {
         initProgressValues() {
             this.progressValues.csharp = '70%';
-            this.progressValues.php = '55%';
+            this.progressValues.php = '50%';
             this.progressValues.html = '40%';
             this.progressValues.css = '60%';
-            this.progressValues.js = '55%';
+            this.progressValues.js = '50%';
             this.progressValues.vue = '60%';
             this.progressValues.mysql = '50%';
-            this.progressValues.mssql = '45%';
+            this.progressValues.mssql = '55%';
             this.progressValues.cplusplus = '20%';
-            this.progressValues.typescript = '45%';
-            this.progressValues.codeigniter = '35%';
+            this.progressValues.typescript = '50%';
+            this.progressValues.codeigniter = '30%';
             this.progressValues.aspnet = '50%';
             this.progressValues.git = '30%';
         },
