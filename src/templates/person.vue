@@ -39,6 +39,7 @@ export default {
                 '2. 遊戲語言包含中文與英文',
                 '3. 後端與資料庫位於Oracle cloud vm，以獲得較多的效能以及權限管理',
                 '4. 可分享遊戲分數連結，當Crawler在抓取連結資料時，也能順利取得相關資料(包含暱稱、分數、通關時間)',
+                '5. 遊戲網址: numbergo.me'
             ],
             steamGameImages: [{ link: '/img/steam1.jpg', alt: 'steam1' }],
             steamGamePLUsage: [{ title: 'C#', width: '0%', targetWidth: '100%', styleClass: 'prog-orange' }],
