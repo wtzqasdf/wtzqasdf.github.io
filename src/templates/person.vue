@@ -2,6 +2,7 @@
     <div id="person" class="container">
         <detail-block :title="'NumberGo'" :images="numbergoImages" :progressBars="numbergoPLUsage" :helpTexts="numbergoHelpTexts"></detail-block>
         <detail-block :title="'Joy You-I-He 蘭花園'" :images="steamGameImages" :progressBars="steamGamePLUsage" :helpTexts="steamGameHelpTexts"></detail-block>
+        <detail-block :title="'GitBlogger'" :images="gitBloggerImages" :progressBars="gitBloggerPLUsage" :helpTexts="gitBloggerHelpTexts"></detail-block>
     </div>
 </template>
 
@@ -39,17 +40,28 @@ export default {
                 '2. 遊戲語言包含中文與英文',
                 '3. 後端與資料庫位於Oracle cloud vm，以獲得較多的效能以及權限管理',
                 '4. 可分享遊戲分數連結，當Crawler在抓取連結資料時，也能順利取得相關資料(包含暱稱、分數、通關時間)',
-                '5. 遊戲網址: numbergo.me'
+                '5. 遊戲網址: numbergo.me',
             ],
             steamGameImages: [{ link: '/img/steam1.jpg', alt: 'steam1' }],
             steamGamePLUsage: [{ title: 'C#', width: '0%', targetWidth: '100%', styleClass: 'prog-orange' }],
             steamGameHelpTexts: ['1. AVG單人電腦遊戲，使用C#與MonoGame開發', '2. 程式串接了Steam API，這包含了Steam啟動器、Steam成就、Steam存檔等等'],
+            gitBloggerImages: [
+                { link: '/img/gitblogger1.jpg', alt: '' },
+                { link: '/img/gitblogger2.jpg', alt: '' },
+                { link: '/img/gitblogger3.jpg', alt: '' },
+                { link: '/img/gitblogger4.jpg', alt: '' },
+                { link: '/img/gitblogger5.jpg', alt: '' },
+                { link: '/img/gitblogger6.jpg', alt: '' },
+            ],
+            gitBloggerPLUsage: [{ title: 'HTML,CSS,TS(React)', width: '0%', targetWidth: '100%', styleClass: 'prog-green' }],
+            gitBloggerHelpTexts: ['1. 基於GitHub的簡易Blogger系統', '2. 檔案的新增, 編輯, 刪除都是透過GitHub API進行', '3. 前端使用了TypeScript React撰寫, 並使用Hash History模式進行頁面切換'],
         };
     },
     methods: {
         initPLUsages() {
             this.updateWidthOfArray(this.numbergoPLUsage);
             this.updateWidthOfArray(this.steamGamePLUsage);
+            this.updateWidthOfArray(this.gitBloggerPLUsage);
         },
         updateWidthOfArray(arr) {
             for (let i = 0; i < arr.length; i++) {
